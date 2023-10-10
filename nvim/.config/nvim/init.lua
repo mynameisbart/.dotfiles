@@ -18,9 +18,17 @@ require("lazy").setup({
 -- or                              , branch = '0.1.x',
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
-{ 'sitiom/nvim-numbertoggle' }
-
+	{ 'sitiom/nvim-numbertoggle' },
+	{
+	  "folke/tokyonight.nvim",
+	  lazy = false,
+	  priority = 1000,
+	  opts = {},
+	}
 })
+
+
+vim.cmd[[colorscheme tokyonight]]
 
 vim.wo.number = true
 vim.o.hlsearch = false
